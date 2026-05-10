@@ -1,0 +1,175 @@
+/* 
+ * TickleApps Global Styles
+ * Brand: Premium, Modern, SaaS
+ */
+
+:root {
+  /* Brand Colors */
+  --ta-coral: #FF7F66;
+  --ta-teal: #26C2B9;
+  --ta-ink: #1F3340;
+  --ta-ink-light: #4A5F6B;
+  --ta-gray-bg: #F7F9FB;
+  --ta-white: #FFFFFF;
+  
+  /* UI Tokens */
+  --ta-radius-sm: 8px;
+  --ta-radius-md: 16px;
+  --ta-radius-lg: 24px;
+  --ta-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --ta-shadow: 0 10px 30px rgba(31, 51, 64, 0.08);
+  --ta-shadow-hover: 0 20px 40px rgba(31, 51, 64, 0.12);
+}
+
+/* Base Styles */
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  background-color: var(--ta-gray-bg);
+  color: var(--ta-ink);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ta-ink);
+}
+
+a {
+  color: var(--ta-teal);
+  text-decoration: none;
+  transition: var(--ta-transition);
+}
+
+a:hover {
+  color: var(--ta-coral);
+}
+
+/* Navbar */
+.ta-navbar {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(231, 235, 238, 0.8);
+  padding: 1rem 0;
+  transition: var(--ta-transition);
+}
+
+.ta-navbar.scrolled {
+  padding: 0.75rem 0;
+  box-shadow: var(--ta-shadow);
+}
+
+.ta-brand {
+  font-weight: 800;
+  font-size: 1.5rem;
+  letter-spacing: -0.04em;
+}
+
+.ta-brand-tickle { color: var(--ta-coral); }
+.ta-brand-apps { color: var(--ta-teal); }
+
+.nav-link {
+  font-weight: 500;
+  color: var(--ta-ink-light);
+  margin: 0 0.5rem;
+  font-size: 0.95rem;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: var(--ta-ink);
+}
+
+/* Components */
+.btn-coral {
+  background-color: var(--ta-coral);
+  color: var(--ta-white);
+  border-radius: var(--ta-radius-sm);
+  padding: 0.6rem 1.5rem;
+  font-weight: 600;
+  border: none;
+}
+
+.btn-coral:hover {
+  background-color: #e56b54;
+  color: var(--ta-white);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 127, 102, 0.3);
+}
+
+.ta-card {
+  background: var(--ta-white);
+  border-radius: var(--ta-radius-md);
+  padding: 2rem;
+  border: 1px solid #E7EBEE;
+  transition: var(--ta-transition);
+}
+
+.ta-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--ta-shadow-hover);
+}
+
+/* AdSense Placeholder */
+.ta-ad-slot {
+  width: 100%;
+  min-height: 100px;
+  background: #f0f2f4;
+  border: 1px dashed #ced4da;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6c757d;
+  font-size: 0.85rem;
+  margin: 2rem 0;
+  border-radius: var(--ta-radius-sm);
+}
+
+/* Sections */
+.hero-section {
+  padding: 8rem 0 4rem;
+  background: radial-gradient(circle at top right, rgba(38, 194, 185, 0.05), transparent),
+              radial-gradient(circle at bottom left, rgba(255, 127, 102, 0.05), transparent);
+}
+
+/* Footer */
+.ta-footer {
+  background: var(--ta-ink);
+  color: rgba(255, 255, 255, 0.7);
+  padding: 4rem 0 2rem;
+}
+
+.ta-footer h5 {
+  color: var(--ta-white);
+  margin-bottom: 1.5rem;
+}
+
+.ta-footer a {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+}
+
+.ta-footer a:hover {
+  color: var(--ta-teal);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding-top: 2rem;
+  margin-top: 2rem;
+  font-size: 0.85rem;
+}
+
+/* Animations */
+.fade-up {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

@@ -1,0 +1,5 @@
+# TickleApps Robots.txt
+User-agent: *
+Allow: /
+
+Sitemap: https://tickleapps.com/sitemap.xml
